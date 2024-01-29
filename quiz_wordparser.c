@@ -90,7 +90,7 @@ compare_inputs(char *s1, char *s2)
  * Informs the user when the program is not used properly.
  * Then ends the program immediately with status code 1.
  */
-void
+static void
 program_usage(void)
 {
     printf("Please provide at least 2 arguments to run this program!\n");
