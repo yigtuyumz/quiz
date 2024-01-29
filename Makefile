@@ -3,7 +3,7 @@ SRCS = quiz_wordparser.c
 FLAGS = -Wall -Wextra -Werror -std=c99
 OUT = quiz
 
-.PHONY: all clean re test
+.PHONY: all clean re
 
 all: test
 
