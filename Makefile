@@ -5,8 +5,7 @@ OUT = quiz
 
 .PHONY: all clean re
 
-all: test
-
+all:
 	$(CC) $(FLAGS) $(SRCS) -o $(basename $(SRCS))
 	$(shell shc -f ./quiz.sh -o quiz; rm quiz.sh.x.c)
 
