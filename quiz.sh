@@ -31,10 +31,8 @@ random_line=$(shuf -n 1 "${wordlist}")
 random_word=$(echo "${random_line}" | awk -F' {2,}' '{printf "%s", $1}')
 solution=$(echo "${random_line}" | awk -F' {2,}'  '{printf "%s", $2}')
 
-
 echo ">>> ${random_word}"
 
-# read -p "Your answer is: " user_answer
 guess_count=0
 
 while [ "${guess_count}" -lt 3 ]; do
@@ -44,10 +42,6 @@ while [ "${guess_count}" -lt 3 ]; do
     echo "The word has been skipped! Correct answer is: ${solution}"
     exit 1
   else
-    # ${parser} "${user_answer}" "${solution}"
-    # if [ "${?}" -eq 0 ]; then
-    #   echo "Correct answer!"
-    #   exit 0
     if ${parser} "${user_answer}" "${solution}"; then
     echo "Correct answer!"
     exit 0
